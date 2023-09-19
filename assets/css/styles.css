@@ -1,0 +1,124 @@
+/* Basic Resets */
+
+a:visited {
+    color: blue;
+}
+
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+header h1, header nav a {
+    margin-right: 20px;
+    color: white;
+}
+
+header nav a:visited{
+    color: white;
+}
+
+section {
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto;
+    padding: 40px;
+    position: relative;
+    height: auto;
+    display: grid;
+}
+
+
+section h1 {
+    display: inline;
+    width: 200px;
+}
+
+.contactContainer {
+    display: flex;
+}
+
+.contactSection {
+    flex: 1;
+    padding: 20px;
+}
+
+
+.articles {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+.articles article{
+    border: 2px solid black;
+    position: relative;
+}
+
+.articles article h3{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: white;
+    padding: 5px;
+}
+
+.articles article:nth-child(3n + 1) {
+    grid-column: 1/span 2;
+    text-align: center;
+    position: relative;
+}
+
+.articles article img {
+    margin: 0 auto;
+    display: block;
+}
+
+.aboutContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#aboutContainer p {
+    padding: 100px;
+}
+
+.aboutContainer img {
+    width: 150px; 
+    height: auto; 
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* For Responsive Design */
+@media only screen and (max-width: 768px) {
+    /* Add styles for smaller screens */
+
+    section {
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        padding: 40px;
+        position: relative;
+        height: auto;
+        display: grid;
+    }
+    .aboutContainer {
+        display: block;
+        align-items: center;
+        gap: 20px;
+    }
+}
